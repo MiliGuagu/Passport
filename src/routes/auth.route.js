@@ -20,8 +20,7 @@ router.get(
         // print req.query.code
         console.log(req.query.code);
         // Successful authentication, redirect to “/”
-        //res.redirect('/auth/profile');
-        res.redirect('/');
+        res.redirect('/auth/profile');
 } );
 
 // GET /verifyLogin
