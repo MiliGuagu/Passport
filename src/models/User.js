@@ -1,30 +1,10 @@
 const {getJSON, saveJSON} = require('../utils/fileHelpers');
 
-/* 
-{
-    "users": [
-        
-    ]
-}
-*/
-
 class User {
   constructor() {
     this.saveData = saveJSON;
     this.fetchData = getJSON;
   }
-
-  /* async find(id) {
-    // fetch the users
-    const data = getJSON();
-    // found the users
-  // const user = data.users.find(({id}) => id === id);
-    const user = data.users.find(({id}) => id === id);
-    // if found return the user
-    if (user) return user;
-    // if not found return Promise.reject(new Error(`User with id ${id} not found`));
-    else return Promise.reject(new Error(`User with id ${id} not found`));
-  } */
 
   async find(id) {
     return new Promise (function(resolve, reject){

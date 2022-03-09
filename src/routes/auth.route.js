@@ -28,7 +28,6 @@ router.get(
 router.get('/verifyLogin', function (req, res) { 
     if (req.user === undefined) res.status(401).send('Not Authorized');
     else res.status(200).send('Logged In');
-    //console.log(req.user)
 });
 
 // GET /logout
@@ -39,7 +38,6 @@ router.get('/logout', function (req, res) {
 });
 
 router.get('/profile', function (req, res) {
-    //res.redirect('./public/html/profile.html');
     res.sendFile('src/public/html/profile.html', { root: "./" });
 });
 

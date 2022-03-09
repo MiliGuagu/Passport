@@ -21,9 +21,6 @@ const User = require('../models/User');
                     done(null, user);
                 })
                 .catch( async (err) => {
-                    //const id = profile.id;
-                    //const email = profile.emails[0].value;
-                    //const imageUrl = profile.photos[0].value;
                     const user = await User.create({ 
                         id: profile.id, 
                         email: profile.emails[0].value, 
